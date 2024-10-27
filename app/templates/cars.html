@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>{{ translation['available_cars'] }}</h3>
+<div class="row">
+    {% for car in cars %}
+    <div class="col-md-4 mb-4">
+        <div class="card">
+            <img src="{{ url_for('static', filename='images/car_placeholder.jpg') }}" class="card-img-top" alt="{{ car.model }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ car.model }}</h5>
+                <p class="card-text">{{ car.description }}</p>
+                <p class="card-text"><strong>{{ translation['price'] }}:</strong> ${{ car.price }}</p>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

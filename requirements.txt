@@ -1,0 +1,5 @@
+i18next
+fastapi
+uvicorn
+aiofiles
+flask
